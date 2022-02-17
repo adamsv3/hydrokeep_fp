@@ -5,7 +5,7 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 
 
-export default function BottomNav(props) {
+export default function BottomNav() {
 
     const [value, setValue] = useState(0); 
 
@@ -17,9 +17,10 @@ export default function BottomNav(props) {
                 setValue(newValue);
         }}
         >
+            <BottomNavigationAction label="Fish Tank" icon={<MdOutlineWater />} />
             <BottomNavigationAction label="Water" icon={<MdWaterDrop/>} />
             <BottomNavigationAction label="Education" icon={<MdSchool />} />
-            <BottomNavigationAction label="Fish Tank" icon={<MdOutlineWater />} />
+
 
         </BottomNavigation>
     )

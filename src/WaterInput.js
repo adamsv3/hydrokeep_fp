@@ -8,15 +8,17 @@ export default function WaterInput(props) {
 
     function ok() {
         props.setWaterAmount(amount);
+        setAmount('');
     }
+
     return (
         <div className = "set-water">
             <input className = "set-water-input"
-                onChange = {(e) => setAmount(e.target.value)}
                 value = {amount}
+                onChange = {(e) => setAmount(e.target.value)}
             />
             <button className = "set-water-button"
-                onClick = {ok}> OK
+                onClick = {ok} > OK
             </button>
             
         </div>

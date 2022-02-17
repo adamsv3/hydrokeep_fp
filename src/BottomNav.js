@@ -15,13 +15,10 @@ export default function BottomNav() {
             value={value}
             onChange={(event, newValue) => {
                 setValue(newValue);
-        }}
-        >
+        }}>
             <BottomNavigationAction label="Fish Tank" icon={<MdOutlineWater />} />
             <BottomNavigationAction label="Water" icon={<MdWaterDrop/>} />
             <BottomNavigationAction label="Education" icon={<MdSchool />} />
-
-
         </BottomNavigation>
     )
 }

@@ -5,7 +5,8 @@ import {useState} from 'react';
 
 
 
-function App() {
+
+function App(props) {
 
   const [wateramount, setWaterAmount] = useState('');
 
@@ -13,7 +14,11 @@ function App() {
     <div className = "App">
 
       {/* The fish-bowl div displays the amount of water the user has inputted that day as it fills up */}
-      <div className = "fish-bowl" />
+      <div className = "fish-bowl" >
+          <span>
+          {props.wateramount}
+          </span>
+      </div>
 
       {/* The water-amount div allows for users to continuously input their water intake */}
       <div className = "water-amount">

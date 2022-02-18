@@ -1,5 +1,7 @@
 import './App.css';
 import WaterInput from './WaterInput.js';
+import Education from './Education.js';
+import FishTank from './FishTank.js';
 import BottomNav from './BottomNav.js';
 import {useState} from 'react';
 
@@ -9,6 +11,7 @@ import {useState} from 'react';
 function App(props) {
 
   const [wateramount, setWaterAmount] = useState('');
+ 
 
   return (
     <div className = "App">
@@ -16,7 +19,8 @@ function App(props) {
       {/* The fish-bowl div displays the amount of water the user has inputted that day as it fills up */}
       <div className = "fish-bowl" >
           <span>
-          {props.wateramount}
+            {/* was hoping this would display their value in the fishtank but it obviously does not ): */}
+          {props.wateramount} 
           </span>
       </div>
 

@@ -5,7 +5,6 @@ export default function WaterInput(props) {
     
     const [amount, setAmount] = useState('');
 
-
     function ok() {
         props.setWaterAmount(amount);
         setAmount('');

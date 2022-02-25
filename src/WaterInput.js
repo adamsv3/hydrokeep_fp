@@ -1,15 +1,50 @@
 import "./WaterInput.css";
 import { useState} from "react";
+import {MdWaterDrop} from "react-icons/md";
+import IconButton from '@mui/material/IconButton';
 
 export default function WaterInput(props) {
-    
+    const [showWater, setShowWater] = useState(false) 
     const [amount, setAmount] = useState('');
 
-    function ok() {
-        props.setWaterAmount(amount);
-        setAmount('');
+    function x(){
+        setShowWater(false);
     }
+    
 
+
+    if (showWater) {
+        return(
+        <div className = "water">
+            <div className = "water-input" />
+                How much water have you drank?
+            <input
+                onChange = {(e) => setAmount(e.target.value)}
+                value = {amount}
+            >
+            </input>
+            <button className = "amount-button"
+                onClick = {(e) => setAmount(e.target.value)}
+            >
+                OK
+            </button>
+            <IconButton aria-label="water-button" onClick = {x}>
+                <MdWaterDrop />
+            </IconButton>
+        </div>)
+    }
+    console.log(setAmount)
+    return (
+        <div className = "water">
+            <IconButton aria-label="water-button" onClick = {() => setShowWater(true)}>
+                <MdWaterDrop />
+            </IconButton>
+        </div>
+
+    )
+
+   
+    console.log(amount);
     return (
         <div className = "set-water">
             <input className = "set-water-input"
@@ -17,41 +52,11 @@ export default function WaterInput(props) {
                 onChange = {(e) => setAmount(e.target.value)}
             />
             <button className = "set-water-button"
-                onClick = {ok} > OK
+                onClick = {x} > OK
             </button>
-            
+
         </div>
     )
 
-    // const [showInput, setShowInput] = useState(false) 
-    // const [amount, setAmount] = useState("")
 
-
-    // function ok(){
-    //     props.setWaterAmount(amount);
-    //     setShowInput(false);
-    // }
-
-    // if (showInput) {
-    //     return(
-    //     <div className = "name-picker">
-    //         <input className = "name-picker-input"
-    //             onChange = {(e) => setAmount(e.target.value)}
-    //             value = {amount}
-    //         />
-    //         <button className = "name-picker-button" onClick = {ok}> OK </button>
-    //     </div>)
-    // }
-    // return (
-    //     <div className = "name-picker">
-    //         <span className = "name-picker-name">
-    //             {amount || 'Set Amount:'}
-    //         </span>
-    //         <button className = "button"
-            
-    //         onClick = {() => setShowInput(true)} >
-
-    //             </button> 
-    //     </div>
-    // )
     }

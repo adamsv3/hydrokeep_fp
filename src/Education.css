@@ -1,0 +1,18 @@
+.edu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.edu-info{
+    height: 100px;
+    width: 100px;
+    background: #5193B3;
+    position: relative;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}

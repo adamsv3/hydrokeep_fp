@@ -1,36 +1,23 @@
-.name-picker{
+.water-input{
+    height: 200px;
+    width: 300px;
+    background: blue;
+    color: white;
+    margin: 10px;
     display: flex;
     align-items: center;
-    background: #D8B4E2;
-    border-radius: .5rem;
-    height: 2rem;
-    position: absolute;
-    right: 10px;
-    padding: .5rem;
-    color: #210B2C;
-}
+    justify-content: center;
+  }
 
-.name-picker-input{
-    background: #210B2C;
-    border-radius: .5rem;
-    color: #D8B4E2;
-    padding: .2rem;
-}
+  .water{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.name-picker-button {
-    background: #210B2C;
-    border-radius: .5rem;
-    color: #D8B4E2;
-    padding: .2rem;
-}
+  .amount-button{
+    width: 30px;
+    display: flex;
+    justify-content: center;
 
-.name-picker svg{
-    stroke: #210B2C;
-    cursor: pointer;
-}
-
-.name-picker-name{
-    color:#210B2C;
-    margin-right: 0.5rem;
-    font-size: 0.8rem;
-}
+  }

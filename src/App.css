@@ -9,20 +9,24 @@
   flex-direction: column;
 }
 
-.content{
+.appnavigation{
   width: 100vw;
+  height: 100vh;
   display: flex;
+  position: relative;
   justify-content: center;
-  align-items: center; 
-  position: absolute;
-  bottom: 0;
+  align-items: center;
+  align-content: center;
 }
 
+
 .header{
+  position: abolute;
   height: 50px;
   font-family: 'Lobster Two', cursive;
   font-size: 60px;
   display: flex;
   color: white;
-  align-items: left;
+  align-items: center;
+  justify-content: center;
 }

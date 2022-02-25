@@ -4,8 +4,6 @@ import FishTank from './FishTank.js';
 import WaterInput from './WaterInput.js';
 import Education from './Education.js';
 import { MdWaterDrop, MdSchool, MdOutlineWater, MdOutlineClose} from "react-icons/md";
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import IconButton from '@mui/material/IconButton';
 
 export default function BottomNav(props) {
@@ -28,13 +26,12 @@ export default function BottomNav(props) {
         setShowEdu(false);
     }
  
-
     if(showFish){
         // waterstate;
         // edustate;
     return[
         <FishTank />,
-        <IconButton aria-label="fish-button" onClick = {fishstate} >
+        <IconButton aria-label="x-button" onClick = {fishstate} size = "large">
             <MdOutlineClose />
          </IconButton>  
     ]
@@ -45,7 +42,7 @@ export default function BottomNav(props) {
         // edustate;
         return[
             <WaterInput />,
-            <IconButton aria-label="water-button" onClick = {waterstate} >
+            <IconButton aria-label="x-button" onClick = {waterstate} size = "large">
                 <MdOutlineClose />
              </IconButton>    
         ]
@@ -56,7 +53,7 @@ export default function BottomNav(props) {
         // edustate;
         return[
             <Education />,
-            <IconButton aria-label="water-button" onClick = {edustate} >
+            <IconButton aria-label="x-button" onClick = {edustate} size = "large" >
                 <MdOutlineClose />
             </IconButton> 
         ]
@@ -64,13 +61,13 @@ export default function BottomNav(props) {
 
     return (
         <div className = "nav">
-            <IconButton aria-label="fish-button" onClick = {() => setShowFish(true)}>
+            <IconButton aria-label="fish-button" onClick = {() => setShowFish(true)} size = "large">
                 <MdOutlineWater/>
             </IconButton>
-            <IconButton aria-label="water-button" onClick = {() => setShowWater(true)}>
+            <IconButton aria-label="water-button" onClick = {() => setShowWater(true)} size = "large">
                 <MdWaterDrop/>
             </IconButton>
-            <IconButton aria-label="edu-button" onClick = {() => setShowEdu(true)}>
+            <IconButton aria-label="edu-button" onClick = {() => setShowEdu(true)} size = "large">
                 <MdSchool/>
             </IconButton>
         </div>

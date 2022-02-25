@@ -1,4 +1,4 @@
-.water-input{
+/* .water-input{
     height: 200px;
     width: 300px;
     background: blue;
@@ -7,13 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .water{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  } */
 
   .amount-button{
     width: 30px;
@@ -21,3 +15,30 @@
     justify-content: center;
 
   }
+
+  .content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content input{
+    height: 30px;
+    background: #5193B3;
+    border-width: 2px;
+    border-color: #4A64AD;
+    color: white;
+    border-radius: 15px;
+  }
+  
+  .content button {
+    border-radius: 15px;
+    background: #5193B3;
+    border-width: 2px;
+    border-color: #4A64AD;
+    color: white;
+  }
+
+  ::placeholder{
+    color: #C4C4C4;
+  }
+

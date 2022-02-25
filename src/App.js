@@ -31,10 +31,7 @@ function App(props) {
       <header className = "header">
         Hydrokeep
       </header>
-      <div className = "content"> 
-        {/* <Education />
-        <WaterInput/>
-        <FishTank /> */}
+      <div className = "appnavigation"> 
         <BottomNav />
       </div>
     </div>

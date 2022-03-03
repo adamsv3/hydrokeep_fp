@@ -1,38 +1,26 @@
 import './App.css';
-import WaterInput from './WaterInput.js';
-import Education from './Education.js';
-import FishTank from './FishTank.js';
 import BottomNav from './BottomNav.js';
+import WaterInput from "./WaterInput";
 import {useState} from 'react';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  useParams
-} from "react-router-dom";
 
-export default function Router() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
+export default function App(props) {
+  const [donation, setDonation] = useState(0);
+  const [goal, setGoal] = useState('');
+  const [water, setWater] = useState(0);
 
-
-
-function App(props) {
+ 
 
   return (
     <div className = "App">
       <header className = "header">
         Hydrokeep
       </header>
+      <div>
+        {props.water}
+      </div>
       <div className = "appnavigation"> 
-        <BottomNav />
+        <WaterInput />
+        {/* <BottomNav /> */}
       </div>
     </div>
   )

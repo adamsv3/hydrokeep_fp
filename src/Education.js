@@ -6,32 +6,13 @@ import IconButton from '@mui/material/IconButton';
 export default function Education(props) {
 
     return (
-        <div className = "content">
-            lorem ipsum
+        <div className = "edu-content">
+            <div className = "title"> 
+                What's the point?
+            </div>
+            <div className = "paragraph">
+            </div>
         </div>
     )
-    // const [showEdu, setShowEdu] = useState(false) 
-
-    // function x(){
-    //     setShowEdu(false);
-    // }
-
-    // if (showEdu) {
-    //     return(
-    //     <div className = "edu">
-    //         <span className = "edu-info">
-    //             Lorem ipsum lorem ipsum lorem ipsum
-    //         </span>
-    //         <IconButton aria-label="edu-button" onClick = {x}>
-    //             <MdSchool />
-    //         </IconButton>
-    //     </div>)
-    // }
-    // return (
-    //     <div className = "edu">
-    //         <IconButton aria-label="edu-button" onClick = {() => setShowEdu(true)}>
-    //             <MdSchool />
-    //         </IconButton>
-    //     </div>
-    // )
+ 
 }

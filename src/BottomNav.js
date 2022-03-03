@@ -11,7 +11,7 @@ export default function BottomNav(props) {
     const [showFish, setShowFish] = useState(false);
     const [showWater, setShowWater] = useState(false);
     const [showEdu, setShowEdu] = useState(false);
-
+    let [dono, setDono] = useState('');
 
     // const [value, setValue] = useState(0);
     function fishstate(){
@@ -41,7 +41,7 @@ export default function BottomNav(props) {
         // fishstate;
         // edustate;
         return[
-            <WaterInput />,
+            <WaterInput setDono = {setDono}/>,
             <IconButton aria-label="x-button" onClick = {waterstate} size = "large">
                 <MdOutlineClose />
              </IconButton>    
@@ -73,23 +73,3 @@ export default function BottomNav(props) {
         </div>
     )
 }
-
-
-        // <BottomNavigation 
-        //     showLabels
-        //     value={value}
-        //     onChange={(event, newValue) => {
-        //         setValue(newValue);}}
-        //     >
-
-        //     {/* Need to figure out how to make it so that onClick these display different pages. 
-        //         Needs componenets that are set to false and onClick are set to true. But I don't quite
-        //         know where to put that */}
-        //     <BottomNavigationAction 
-        //         label="Fish Tank" 
-        //         icon={<MdOutlineWater />} 
-
-        //     />
-        //     <BottomNavigationAction label="Water" icon={<MdWaterDrop/>} />
-        //     <BottomNavigationAction label="Education" icon={<MdSchool />} />
-        // </BottomNavigation>

@@ -9,6 +9,8 @@
     justify-content: center;
   } */
 
+  
+
   .amount-button{
     width: 30px;
     display: flex;
@@ -19,6 +21,7 @@
   .content{
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
   .content input{
@@ -42,3 +45,19 @@
     color: #C4C4C4;
   }
 
+.waterinput{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.display{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background: white;
+  margin: 10px;
+}

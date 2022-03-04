@@ -61,3 +61,8 @@
   background: white;
   margin: 10px;
 }
+
+.achieved{
+  display: flex;
+  flex-direction: column;
+}

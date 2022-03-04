@@ -24,13 +24,19 @@ export default function WaterInput(props) {
 
     if ( water >= goal  && water !== 0 && goal !== 0) {
         return(
-            <span> Congrats! You met your water goal. </span>
+            <div className ="achieved"> 
+                <span> Congrats! You met your water goal. </span>
+                <span> Your goal: {goal} oz </span>
+                <span> You drank: {water} oz</span> 
+            </div>
+
         )
     }
     
+
     return (
         <div className = "content">
-            {goal}
+            Goal: {goal} oz
             <div className = "waterinput">
                 <span> How much water did you drink?    </span> 
                 <span className = "display"> {water} oz</span>

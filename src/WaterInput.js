@@ -1,25 +1,50 @@
 import "./WaterInput.css";
-import Donation from "./Donation.js"
 import { useState} from "react";
 
 export default function WaterInput(props) {
 
-    const [donation, setDonation] = useState(0);
-    const [goal, setGoal] = useState(0);
+    const [donation, setDonation] = useState(null);
+    const [fakegoal, setFakeGoal] = useState(null);
+    const [goal, setGoal] = useState(null);
     const [water, setWater] = useState(0);
+    const [waterInfo, setWaterInfo] = useState(false);
 
-    if (goal === 0) {
+
+    if (goal === null) {
         return (
-
             <div className = "goalinput">
-                What is your water goal?
-                <input placeholder = "oz" 
-                    value = {goal}
-                    onChange = {(e) => setGoal(e.target.value)}/>
-            </div>
+                <div className = "question"> 
+                    What is your water goal?
+                    <button className = "info-button" onClick = {(e) => setWaterInfo(true)}> ? </button> 
+                </div>
 
+                <div className = "input">
+                    <input
+                        placeholder = "oz" 
+                        value = {fakegoal}
+                        onChange = {(e) => setFakeGoal (e.target.value)}>
+                    </input>
+                </div>
+
+                <div className = "question"> 
+                    What is your donation for the day?
+                    <button className = "info-button"> ? </button> 
+                </div>
+
+                <div className = "goalinput">
+                    <input
+                        placeholder = "$" 
+                        value = {donation}
+                        onChange = {(e) => setDonation (e.target.value)}>
+                    </input>
+                </div>
+
+                <button onClick = {(e) => setGoal(fakegoal)}> Set Goals </button>
+
+            </div>
         )
     }
+
 
 
     if ( water >= goal  && water !== 0 && goal !== 0) {
@@ -33,12 +58,9 @@ export default function WaterInput(props) {
         )
     }
     
-
-    return (
+  return (
         <div className = "content">
-            Goal: {goal} oz
             <div className = "waterinput">
-                <span> How much water did you drink?    </span> 
                 <span className = "display"> {water} oz</span>
                 <div className = "buttons"> 
                     <button onClick = {(e) => setWater(water + 6)}>
@@ -56,11 +78,11 @@ export default function WaterInput(props) {
                     <button onClick = {(e) => setWater(water + 16)}>
                         16oz   
                     </button>
-
-                    <button onClick = {(e) => setWater(0)}>
-                        Clear
-                    </button>
                 </div>
+            <div className = "input-displays"> 
+                <span> Goal: {goal} oz </span>
+                <span> Donation: ${donation||"0"} </span>
+            </div>
             </div>
 
 

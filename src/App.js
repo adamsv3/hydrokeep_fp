@@ -5,10 +5,12 @@ import Education from './Education.js';
 import WaterInput from "./WaterInput";
 import IconButton from '@mui/material/IconButton';
 import {useState} from 'react';
+import mySeaweed from './mySeaweed.png'
 
 export default function App(props) {
   
 const [showEdu, setShowEdu] = useState(false) 
+
 
 function edu(){
   setShowEdu(true)
@@ -25,12 +27,25 @@ if (showEdu) {
       <div className = "title">
         Hydrokeep
       </div> 
-       <IconButton onClick = {eduoff} > <MdOutlineClose /> </IconButton> 
+       <IconButton onClick = {eduoff} className = "learnmorebutton"> <MdOutlineClose /> </IconButton> 
       </header>
-      <div className = "appnavigation"> 
-        <Education />
-        {/* <BottomNav /> */}
+      <div className = "appstuff"> 
+          <Education />
       </div>
+      {/* <div>
+        <img className = "seaweed" src = {mySeaweed}> </img>
+      </div> */}
+      {/* <footer className ="footer">
+        <img className = "seaweed" src={seaweed} alt="seaweed" />
+        <img className = "seaweed" src={seaweed} alt="seaweed" />
+        <img className = "seaweed" src={seaweed} alt="seaweed" />
+        <img className = "seaweed" src={seaweed} alt="seaweed" />
+        <img className = "seaweed" src={seaweed} alt="seaweed" />
+        <img className = "seaweed" src={seaweed} alt="seaweed" />
+        <img className = "seaweed" src={seaweed} alt="seaweed" />
+        <img className = "seaweed" src={seaweed} alt="seaweed" />
+        <img className = "seaweed" src={seaweed} alt="seaweed" />
+      </footer> */}
     </div>
   )
 }
@@ -41,11 +56,16 @@ if (showEdu) {
       <div className = "title">
         Hydrokeep
       </div> 
-       <IconButton onClick = {edu} > <MdSchool /> </IconButton> 
+      <button className = "learnmorebutton" onClick = {edu}> Learn more </button> 
       </header>
-      <div className = "appnavigation"> 
+      <div className = "appstuff"> 
         <WaterInput />
       </div>
-    </div>
+      {/* <div>
+        <img src = {mySeaweed}> </img>
+      </div> */}
+
+      </div>
+   
   )
 }

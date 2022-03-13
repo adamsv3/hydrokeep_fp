@@ -1,68 +1,109 @@
-/* .water-input{
-    height: 200px;
-    width: 300px;
-    background: blue;
-    color: white;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
-
-  
-
-  .amount-button{
-    width: 30px;
-    display: flex;
-    justify-content: center;
-
-  }
-
-  .content{
+.content{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
-  .content input{
-    height: 30px;
-    background: #5193B3;
-    border-width: 2px;
-    border-color: #4A64AD;
-    color: white;
-    border-radius: 15px;
-  }
-  
-  .content button {
-    border-radius: 15px;
-    background: #5193B3;
-    border-width: 2px;
-    border-color: #4A64AD;
-    color: white;
-  }
-
-  ::placeholder{
-    color: #C4C4C4;
-  }
+::placeholder{
+  color: #C4C4C4;
+}
 
 .waterinput{
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
 }
+ 
+.waterinput button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10rem;
+  background: #5193B3;
+  border: none;
+  color: white;
+  margin: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 
 .display{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
-  background: white;
-  margin: 10px;
+  font-size: 10rem;
 }
 
 .achieved{
   display: flex;
   flex-direction: column;
+  font-size: 3rem;
+  color: white;
+}
+
+.goalinput{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.goalinput button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius:.5rem;
+  background: #5193B3;
+  color: white;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.goalinput input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 5rem;
+  background: #5193B3;
+  border: none;
+  padding: .5rem;
+  color: white;
+  border-radius: .5rem;
+  font-size: 1rem;
+}
+
+.input-displays{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: white;
+}
+
+.info-button {
+  background: rgb(96, 102, 102) !important;
+  border-radius: 10rem !important;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+  margin: 0.4rem !important;
+  color: #C4C4C4 !important;
+  
+}
+
+.question {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
 }

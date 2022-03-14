@@ -1,5 +1,4 @@
 import './App.css';
-import BottomNav from './BottomNav.js';
 import {MdSchool, MdOutlineClose} from "react-icons/md";
 import Education from './Education.js';
 import WaterInput from "./WaterInput";

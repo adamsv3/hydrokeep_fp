@@ -15,10 +15,13 @@ export default function WaterInput(props) {
             <div className = "goalinput">
                 <div className = "question"> 
                     What is your water goal?
-                    <button className = "info-button" onClick = {(e) => setWaterInfo(true)}> ? </button> 
                 </div>
-
-                <div className = "input">
+                <div className = "goalinput-input">
+                    <div className = "information-box"> 
+                        The amount of water you drink daily depends on many different factors.
+                        Use <a href ="https://www.everydayhealth.com/dehydration/hydration-calculator/">this calculator </a> 
+                        to determine how much water you should drink in a day.
+                    </div>
                     <input
                         placeholder = "oz" 
                         value = {fakegoal}
@@ -28,10 +31,14 @@ export default function WaterInput(props) {
 
                 <div className = "question"> 
                     What is your donation for the day?
-                    <button className = "info-button"> ? </button> 
                 </div>
 
-                <div className = "goalinput">
+                <div className = "goalinput-input">
+                    <div className = "information-box"> 
+                        Wager money on whether or not you can complete your water goal! If you don't meet
+                        your water goal for the day, the amount yout input here will be donated to clean water
+                        charities. Click "Learn More" in the corner to learn more.
+                    </div>
                     <input
                         placeholder = "$" 
                         value = {donation}

@@ -104,6 +104,22 @@
 
 .question {
   display: flex;
-  flex-direction: row !important;
+  flex-direction: column;
   align-items: center;
+  font-size: 2.5rem;
+}
+
+.goalinput-input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.information-box{
+  font-size: .8rem;
+  width: 20rem;
+  padding: 1rem;
+  background: #6997ad;
+  border-radius: 1.5rem;
+  margin: 1rem;
+  text-align: left;
 }

@@ -12,7 +12,7 @@
 .App button {
   font-family: 'Raleway', sans-serif;
 }
-.appstuff{
+.app-display{
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -22,7 +22,6 @@
   align-items: center;
   align-content: center;
 }
-
 
 .header{
   position: abolute;
@@ -42,7 +41,7 @@
   font-size: 4rem;
 }
 
-.learnmorebutton{
+.learnmore-button{
   position: absolute;
   right: 1rem;
   display: flex;
@@ -59,11 +58,3 @@
   cursor: pointer; 
 }
 
-.footer{
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-}
-.seaweed{
-  height: 30vh;
-}

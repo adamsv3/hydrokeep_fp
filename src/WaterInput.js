@@ -7,8 +7,6 @@ export default function WaterInput(props) {
     const [fakegoal, setFakeGoal] = useState(null);
     const [goal, setGoal] = useState(null);
     const [water, setWater] = useState(0);
-    const [waterInfo, setWaterInfo] = useState(false);
-
 
     if (goal === null) {
         return (
@@ -91,10 +89,6 @@ export default function WaterInput(props) {
                 <span> Donation: ${donation||"0"} </span>
             </div>
             </div>
-
-
-
-
         </div>
     )
 

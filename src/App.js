@@ -1,24 +1,26 @@
 import './App.css';
-import {MdSchool, MdOutlineClose} from "react-icons/md";
+import {MdOutlineClose} from "react-icons/md";
 import Education from './Education.js';
 import WaterInput from "./WaterInput";
 import IconButton from '@mui/material/IconButton';
 import {useState} from 'react';
-import mySeaweed from './mySeaweed.png'
 
-export default function App(props) {
-  
+export default function App() {
+
+//showEdu is triggered to show the educational piece to the applicaiton
 const [showEdu, setShowEdu] = useState(false) 
 
-
+//shows edu info when "learn more" button is clicked 
 function edu(){
   setShowEdu(true)
 }
 
+//closes edu info when "x" button is clicked
 function eduoff(){
   setShowEdu(false)
 }
 
+// if the button is clicked, education info is return
 if (showEdu) {
   return (
     <div className = "App">
@@ -26,44 +28,27 @@ if (showEdu) {
       <div className = "title">
         Hydrokeep
       </div> 
-       <IconButton onClick = {eduoff} className = "learnmorebutton"> <MdOutlineClose /> </IconButton> 
+       <IconButton onClick = {eduoff} className = "learnmore-button"> <MdOutlineClose /> </IconButton> 
       </header>
-      <div className = "appstuff"> 
+      <div className = "app-display"> 
           <Education />
       </div>
-      {/* <div>
-        <img className = "seaweed" src = {mySeaweed}> </img>
-      </div> */}
-      {/* <footer className ="footer">
-        <img className = "seaweed" src={seaweed} alt="seaweed" />
-        <img className = "seaweed" src={seaweed} alt="seaweed" />
-        <img className = "seaweed" src={seaweed} alt="seaweed" />
-        <img className = "seaweed" src={seaweed} alt="seaweed" />
-        <img className = "seaweed" src={seaweed} alt="seaweed" />
-        <img className = "seaweed" src={seaweed} alt="seaweed" />
-        <img className = "seaweed" src={seaweed} alt="seaweed" />
-        <img className = "seaweed" src={seaweed} alt="seaweed" />
-        <img className = "seaweed" src={seaweed} alt="seaweed" />
-      </footer> */}
     </div>
   )
 }
 
+//if x button is clicked, normal waterinput is returned
   return (
     <div className = "App">
       <header className = "header">
-      <div className = "title">
-        Hydrokeep
-      </div> 
-      <button className = "learnmorebutton" onClick = {edu}> Learn more </button> 
+        <div className = "title">
+          Hydrokeep
+        </div> 
+        <button className = "learnmore-button" onClick = {edu}> Learn more </button> 
       </header>
-      <div className = "appstuff"> 
-        <WaterInput />
-      </div>
-      {/* <div>
-        <img src = {mySeaweed}> </img>
-      </div> */}
-
+        <div className = "app-display"> 
+          <WaterInput />
+        </div>
       </div>
    
   )
